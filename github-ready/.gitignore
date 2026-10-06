@@ -1,0 +1,27 @@
+# Never commit accounting exports, generated reports or local caches.
+*.xlsx
+*.xls
+*.xlsm
+*.csv
+*.tsv
+*.json
+*.xml
+*.clixml
+*.log
+*.png
+*.zip
+test-output/
+dist/
+private/
+reports/
+Результат*/
+Сверка_*/
+Автосверка_*/
+Отчёт.html
+__pycache__/
+.env
+.env.*
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini

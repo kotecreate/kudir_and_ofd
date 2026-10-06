@@ -1,0 +1,15 @@
+name: Tests
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  synthetic-tests:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unit tests without Excel
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          & .\tests.ps1
+          & .\tests-auto.ps1
